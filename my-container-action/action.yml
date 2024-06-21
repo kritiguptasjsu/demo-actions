@@ -1,0 +1,15 @@
+name: 'Container Action'
+description: 'Container action demo'
+inputs:
+  your-name:
+    description: 'Your name'
+    required: true
+    default: 'Kriti'
+outputs:
+  time:
+    description: 'The time of the message'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.your-name }}
