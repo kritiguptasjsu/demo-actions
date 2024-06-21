@@ -7,7 +7,7 @@ jobs:
     steps:
     - name: First container action step
       id: mycontaineraction
-      uses: kritigupta/demo-actions/my-container-action@v2
+      uses: kritiguptasjsu/demo-actions/my-container-action@v2
       with:
         your-name: 'Gupta'
     - name: Get the output time
