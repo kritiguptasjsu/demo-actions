@@ -1,0 +1,14 @@
+on: [workflow_dispatch]
+
+jobs:
+  container_action_job:
+    runs-on: ubuntu-latest
+    name: container action demo
+    steps:
+    - name: First container action step
+      id: mycontaineraction
+      uses: kritigupta/demo-actions/my-container-action@v2
+      with:
+        your-name: 'Gupta'
+    - name: Get the output time
+      run: echo "The time was ${{ steps.mycontaineraction.outputs.timeofmessage }}"
