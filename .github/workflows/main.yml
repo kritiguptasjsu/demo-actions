@@ -1,0 +1,12 @@
+on: [workflow_dispatch]
+
+jobs:
+  composite_action_job:
+    runs-on: ubuntu-latest
+    name: My composite action
+    steps:
+    - name: First comosite action
+      id: mycomposteaction
+      uses: kritiguptasjsu/demo-actions/my-composite-action@v1
+      with:
+        your-name: 'Gupta'
