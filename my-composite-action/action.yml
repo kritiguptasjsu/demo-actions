@@ -1,0 +1,14 @@
+name: 'Hello World'
+description: 'saying hello world to composite action'
+inputs:
+  your-name:
+    description: 'Your name'
+    required: true
+    default: 'Kriti'
+runs:
+  using: "composite"
+  steps:
+    - run: echo Hello ${{ inputs.your-name}}
+      shell: bash
+    - run: ${{ github.action_path }}/helloworld.sh
+      shell: bash
